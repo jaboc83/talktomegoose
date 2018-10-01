@@ -1,0 +1,11 @@
+Message,Weight,Activate after x min.,Deactivate after x min.
+Where's the enemy Jungler?,100,0,15
+How many wards do you have?,100,5,
+Did you buy a sweeper?,100,10,20
+Check the mini map,100,0,
+What's the next objective,100,5,
+Who is the strongest enemy,100,5,
+Who is your strongest ally,100,5,
+Who is winning in CS,100,5,
+When is Dragon up and what type is it?,100,0,
+When is Baron up?,100,19,

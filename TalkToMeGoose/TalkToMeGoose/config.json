@@ -1,0 +1,6 @@
+{
+  "intervalInSec": 10,
+  "randomizeVoice": false,
+  "volume": 100,
+  "speechRate": 0
+}
