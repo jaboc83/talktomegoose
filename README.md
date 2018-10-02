@@ -32,6 +32,7 @@ The file is formated as a comma-seperated-value file which can be opened with Ex
   * **Weight:** This number represents how often you want this phrase to be read. The numbers are relative to each other so it doesn't matter if they are 1, 100, or 1,000. Larger numbers will be read more often than smaller numbers. You can think of it like entering names into a lottery, the more names you enter the more likely you are to win. 
   * **Activate after x min:** This number represents the number of minutes you want to wait before the game starts reading this phrase. For example: if you want to be prompted about baron related things you probably don't want to hear about it in the first 15 min of the game so you can set the activate time closer to when the baron would come into play. A setting of 0 means it is active immediately when you start.
   * **Inactivate after x min:** This number is the opposite of the above value. It represents the number of minutes after which you no longer want to hear about something. For instance it makes no sense to ask questions about rift harold after a certain point in the game so you can inactivate the rule after 20 minutes if you like. Leaving the value blank means the rule runs forever.
+  ![Phrases CSV file](screenshots/phrasescsv.png "View of phrases in Excel")
 
 ## Future improvements
 Please feel free to send your ideas to improve the tool and any phrase sets you create that would be helpful to other users of the tool.
