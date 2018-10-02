@@ -23,13 +23,21 @@ namespace TalkToMeGoose
         /// </summary>
         internal string Message { get; set; }
 
-        // abstract number to indicate how often a phrase should be presented. Is relative to other phrase weights.
+        /// <summary>
+        /// abstract number to indicate how often a phrase should be presented. Is relative to other phrase weights.
+        /// </summary>
         internal int Weight { get; set; }
+
+        /// <summary>
+        /// Optional audio file if you don't like text to speech
+        /// </summary>
+        internal string AudioFile { get; set; }
 
         public override string ToString()
         {
             return $"{this.Message} Active from {ActivateTimeInMin} min " + (InactivateTimeInMin != null ?
                 $"to {InactivateTimeInMin} min. ({Weight} weight)" : $"to end of game. ({Weight} weight)");
         }
+
     }
 }

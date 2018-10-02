@@ -1,25 +1,25 @@
-Message,Weight,Activate after x min.,Deactivate after x min.
-Where's the enemy Jungler?,100,2,15
-How many wards do you have?,100,5,
-Did you buy a sweeper?,100,10,20
-Check the mini map.,100,2,
-What's the next objective?,100,5,
-Who is the strongest enemy?,100,5,
-Who is your strongest ally?,100,5,
-Who is winning in CS?,100,5,
-When is dragon up and what type is it?,100,1,
-When is baron up?,100,19,
-Sweep for enemy wards.,100,15,
-Which lanes have priority?,100,5,
-Are your active items ready for a fight?,100,15,
-Do you need to build armor or magic resist?,100,5,
-Which Tower is closest to falling?,100,10,
-Trade after they use key abilities.,100,3,
-What is your team's win condition?,100,0,3
-What is your lane's win condition?,100,0,3
-What's the enemy win condition?,100,0,3
-What's the enemy lane win condition?,100,0,3
-What runes and summoners did everyone take?,100,0,3
-Who are the early game threats?,100,0,3
-Who are the late game threats?,100,0,3
-Remember to ping burned summoners.,100,5,
+Message,Weight,Activate after x min.,Deactivate after x min.,AudioFile
+Where's the enemy Jungler?,100,2,15,
+How many wards do you have?,100,5,,
+Did you buy a sweeper?,100,10,20,
+Check the mini map.,100,2,,
+What's the next objective?,100,5,,
+Who is the strongest enemy?,100,5,,
+Who is your strongest ally?,100,5,,
+Who is winning in CS?,100,5,,
+When is dragon up and what type is it?,100,1,,
+When is baron up?,100,19,,
+Sweep for enemy wards.,100,15,,
+Which lanes have priority?,100,5,,
+Are your active items ready for a fight?,100,15,,
+Do you need to build armor or magic resist?,100,5,,
+Which Tower is closest to falling?,100,10,,
+Trade after they use key abilities.,100,3,,
+What is your team's win condition?,100,0,3,
+What is your lane's win condition?,100,0,3,
+What's the enemy win condition?,100,0,3,
+What's the enemy lane win condition?,100,0,3,
+What runes and summoners did everyone take?,100,0,3,
+Who are the early game threats?,100,0,3,
+Who are the late game threats?,100,0,3,
+Remember to ping burned summoners.,100,5,,
