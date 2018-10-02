@@ -17,6 +17,10 @@ namespace TalkToMeGoose
         static Stopwatch runningTime = new Stopwatch();
         static Configuration cfg = new Configuration();
 
+        /// <summary>
+        /// Main application logic
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             // keep a running timer for phrase activation/inactivation
@@ -53,13 +57,17 @@ namespace TalkToMeGoose
                 cfg = JsonConvert.DeserializeObject<Configuration>(json);
             }
 
+            // Setup voice
             Dictionary<string, int> countCheck = new Dictionary<string, int>();
             SpeechSynthesizer synthesizer = new SpeechSynthesizer
             {
                 Volume = cfg.Volume,  // 0...100
                 Rate = cfg.SpeechRate     // -10...10
             };
+            // Chose the voice once here in case they don't want random voice option
             synthesizer.SelectVoice(synthesizer.GetInstalledVoices().OrderBy(x => Guid.NewGuid()).FirstOrDefault().VoiceInfo.Name);
+
+            // Build the random phrase selector
             var selector = new DynamicRandomSelector<Phrase>();
             foreach(var phrase in phrases)
             {
@@ -67,16 +75,20 @@ namespace TalkToMeGoose
                 selector.Add(phrase, phrase.Weight);
             }
             selector.Build();
+
             bool isValidSelection;
             Phrase selection = null;
+            // Begin speaking
             while (true)
             {
-                // Choose a random voice
+                // Choose a random voice if needed
                 if (cfg.RandomizeVoice)
                 {
                     synthesizer.SelectVoice(synthesizer.GetInstalledVoices().OrderBy(x => Guid.NewGuid()).FirstOrDefault().VoiceInfo.Name);
                 }
                 isValidSelection = false;
+
+                // Make sure the selected phrase is valid for the current game time
                 while (!isValidSelection) {
                     selection = selector.SelectRandomItem();
                     if (runningTime.Elapsed.TotalMinutes > selection.ActivateTimeInMin &&
@@ -84,8 +96,13 @@ namespace TalkToMeGoose
                         isValidSelection = true;
                     }
                 }
+
+                // Print the phrase
                 Console.WriteLine(selection);
+                // Speak the phrase
                 synthesizer.Speak(selection.Message);
+
+                // Wait before speaking the next phrase
                 Thread.Sleep(cfg.IntervalInSec * 1000);
             }
         }

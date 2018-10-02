@@ -5,7 +5,7 @@ A League of Legends training tool
 This is a simple application for helping you improve your League of Legends skills. The idea is simple, have someone hinting at you to remember to do important things throughout the game. Many people have recommended having a metronome clicking in the background to teach to you look at the mini-map. I've taken that idea a bit further to allow you to have your computer speak a custom set of phrases to you as you play the game to remind you to do many other important things while you play.
 
 ## How to Install and Run TTMG
-To install the tool simply download the [zip file located here](https://github.com/jaboc83/talktomegoose/raw/master/Releases/talktomegoose.zip) and unzip somewhere on your machine. Then double-click talktomegoose.exe to run the application. Note: if Windows puts up a dialog about the file being unsafe you make have to click the "More Info" link to allow the file to open. This will open a small console window like the one shown in the following picture. As time goes on the computer will read phrases to you and will also print the phrase to the small dialog window if you want to look back at what was said.
+To install the tool simply download the [zip file located here](https://github.com/jaboc83/talktomegoose/raw/master/Releases/talktomegoose-1.0.0.0.zip) and unzip somewhere on your machine. Then double-click talktomegoose.exe to run the application. Note: if Windows puts up a dialog about the file being unsafe you make have to click the "More Info" link to allow the file to open. This will open a small console window like the one shown in the following picture. As time goes on the computer will read phrases to you and will also print the phrase to the small dialog window if you want to look back at what was said.
  ![Console App Running](screenshots/console.png "View of running console application")
  
  Be sure to start the application about when the game actually starts or your time based rules might be inaccurate. (See Active and Inactive rule settings in the phrases.csv section below for more detail)
@@ -35,9 +35,12 @@ The file is formated as a comma-seperated-value file which can be opened with Ex
 
 ## Future improvements
 Please feel free to send your ideas to improve the tool and any phrase sets you create that would be helpful to other users of the tool.
-* Create a web based version?
+* Create a web based version
 * Create a nice interface for setting up the rules instead of editing config files.
 * Create a collection of default phrases.csv for different roles
-* Allow users to select phrase set at run time
+* Allow users to select a phrase set at run time
 * Allow Users to change settings on the fly
 * See if there is a way to start the app when the game starts automatically
+* Possibly allow an interface for marking summoners and informing when they should be coming off cooldown
+* Allow pre-recorded voice clips instead of text-to-speech
+
